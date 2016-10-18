@@ -5,10 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App;
-use Auth;
 use Redirect;
 
 class HomeController extends Controller
@@ -20,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+//        $this->middleware('auth');
     }
 
     /**
@@ -30,6 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         return view('front-end.home.index');
     }
 }
